@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentDisciplina"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DisciplinaFragment">
+
+    <EditText
+        android:id="@+id/etCodigoDisc"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="@string/codigo"
+        android:inputType="number"
+        android:textColorHint="@color/black"
+        android:importantForAutofill="no"
+        app:layout_constraintBottom_toTopOf="@+id/etNomeDisc"
+        app:layout_constraintEnd_toStartOf="@+id/btnBuscarDisc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloDisc" />
+
+    <Button
+        android:id="@+id/btnBuscarDisc"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/buscar"
+        app:layout_constraintBottom_toTopOf="@+id/etNomeDisc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etCodigoDisc"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloDisc" />
+
+    <EditText
+        android:id="@+id/etNomeDisc"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="118dp"
+        android:layout_marginBottom="115dp"
+        android:ems="10"
+        android:hint="@string/nome"
+        android:inputType="text"
+        android:textColorHint="@color/black"
+        android:importantForAutofill="no"
+        app:layout_constraintBottom_toBottomOf="@+id/btnModificarDisc"
+        app:layout_constraintEnd_toEndOf="@+id/spProfDisc"
+        app:layout_constraintStart_toStartOf="@+id/spProfDisc"
+        app:layout_constraintTop_toTopOf="@+id/tvTituloDisc" />
+
+    <Button
+        android:id="@+id/btnInserirDisc"
+        android:layout_width="103dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="322dp"
+        android:text="@string/inserir"
+        app:layout_constraintStart_toStartOf="@+id/spProfDisc"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnExcluirDisc"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/excluir"
+        app:layout_constraintBottom_toBottomOf="@+id/btnListarDisc"
+        app:layout_constraintStart_toStartOf="@+id/btnInserirDisc"
+        app:layout_constraintTop_toTopOf="@+id/btnListarDisc" />
+
+    <Button
+        android:id="@+id/btnModificarDisc"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="35dp"
+        android:text="@string/modificar"
+        app:layout_constraintBottom_toBottomOf="@+id/btnInserirDisc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnInserirDisc" />
+
+    <Button
+        android:id="@+id/btnListarDisc"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="23dp"
+        android:text="@string/listar"
+        app:layout_constraintStart_toStartOf="@+id/btnModificarDisc"
+        app:layout_constraintTop_toBottomOf="@+id/btnModificarDisc" />
+
+    <TextView
+        android:id="@+id/tvListarDisc"
+        android:layout_width="414dp"
+        android:layout_height="249dp"
+        android:layout_marginTop="42dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnExcluirDisc" />
+
+    <TextView
+        android:id="@+id/tvTituloDisc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="89dp"
+        android:text="@string/disciplina"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spProfDisc"
+        android:layout_width="314dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="147dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="147dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnExcluirDisc"
+        app:layout_constraintEnd_toEndOf="@+id/btnBuscarDisc"
+        app:layout_constraintStart_toStartOf="@+id/tvListarDisc"
+        app:layout_constraintTop_toTopOf="@+id/btnBuscarDisc" />
+</androidx.constraintlayout.widget.ConstraintLayout>
